@@ -36,3 +36,19 @@ body {
     opacity: 0.03;
     pointer-events: none;
 }
+
+/* Floating animation for showcase product */
+@keyframes floatX {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+.floating-product {
+    animation: floatX 6s ease-in-out infinite;
+}
+.perspective-\[1000px\] {
+    perspective: 1000px;
+}
+.transform-style-3d {
+    transform-style: preserve-3d;
+}

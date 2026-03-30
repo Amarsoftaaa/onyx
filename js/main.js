@@ -152,6 +152,88 @@ gsap.to('#heritage-sweep', {
 });
 
 /* -------------------------------------------------------------------------- */
+/* 4. PREMIUM SHOWCASE SECTION ANIMATION                                      */
+/* -------------------------------------------------------------------------- */
+const showcaseTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#showcase-section',
+        start: 'top 75%',
+        toggleActions: 'play none none reverse'
+    }
+});
+
+// Video container scales up and fades in
+showcaseTl.fromTo('#showcase-video-container',
+    { opacity: 0, scale: 0.9, x: -30 },
+    { opacity: 1, scale: 1, x: 0, duration: 1.2, ease: "power3.out" }
+);
+
+// Text info staggered fade and slide right
+showcaseTl.fromTo('.showcase-text',
+    { opacity: 0, x: 40 },
+    { opacity: 1, x: 0, duration: 1, stagger: 0.15, ease: "power2.out" },
+    "-=0.8" // Start slightly before video animation finishes
+);
+
+// 3D Tilt Interaction on the Glass Card and Image Parallax
+const showcaseCard = document.querySelector('.showcase-card');
+const showcaseImage = document.getElementById('showcase-image');
+
+if(showcaseCard) {
+    showcaseCard.addEventListener('mousemove', (e) => {
+        const rect = showcaseCard.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Calculate rotation based on cursor position
+        const rotateX = ((y - centerY) / centerY) * -15; // Max 15 deg
+        const rotateY = ((x - centerX) / centerX) * 15;
+        
+        // Rotate the parent card
+        gsap.to(showcaseCard, {
+            rotateX: rotateX,
+            rotateY: rotateY,
+            duration: 0.5,
+            ease: "power2.out"
+        });
+
+        // Add extreme parallax translation to the image to make it pop out in 3D space
+        if(showcaseImage) {
+            gsap.to(showcaseImage, {
+                x: ((x - centerX) / centerX) * 40, // moves up to 40px
+                y: ((y - centerY) / centerY) * 40,
+                rotateZ: ((x - centerX) / centerX) * 5, // slight twist based on X
+                duration: 0.5,
+                ease: "power2.out"
+            });
+        }
+    });
+
+    showcaseCard.addEventListener('mouseleave', () => {
+        // Snap back to 0 with a high-quality elastic bounce
+        gsap.to(showcaseCard, {
+            rotateX: 0,
+            rotateY: 0,
+            duration: 1.2,
+            ease: "elastic.out(1, 0.5)"
+        });
+
+        if(showcaseImage) {
+            gsap.to(showcaseImage, {
+                x: 0,
+                y: 0,
+                rotateZ: 0,
+                duration: 1.2,
+                ease: "elastic.out(1, 0.5)"
+            });
+        }
+    });
+}
+
+/* -------------------------------------------------------------------------- */
 /* 2. ARSENAL (PRODUCT) HORIZONTAL SCROLL                                     */
 /* -------------------------------------------------------------------------- */
 const productsContainer = document.getElementById('products-container');

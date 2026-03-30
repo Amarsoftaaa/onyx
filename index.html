@@ -93,6 +93,59 @@
         </div>
     </section>
 
+    <!-- PREMIUM PRODUCT SHOWCASE SECTION -->
+    <section id="showcase-section" class="relative w-full min-h-screen bg-[#0a0a0a] flex items-center justify-center py-20 px-6 md:px-12 overflow-hidden z-20">
+        
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/2 left-1/4 w-[50vw] max-w-[500px] h-[50vh] max-h-[500px] bg-gold/5 blur-[100px] rounded-full pointer-events-none -translate-y-1/2"></div>
+        <!-- Grain Texture overlay for consistency -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')] opacity-20 pointer-events-none mix-blend-overlay"></div>
+
+        <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
+            
+            <!-- Left: Product Video Container -->
+            <div id="showcase-video-container" class="w-full md:w-1/2 flex items-center justify-center relative perspective-[1000px]">
+                <div class="relative w-full aspect-square max-w-[500px] flex items-center justify-center showcase-card transform-style-3d">
+                    <!-- Glass Platform / Shadow -->
+                    <div class="absolute bottom-10 w-3/4 h-8 bg-black/80 blur-xl rounded-[100%] pointer-events-none"></div>
+                    
+                    <!-- Image Wrapper with Drop Shadow -->
+                    <div class="relative w-full h-full z-10 floating-product drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] filter">
+                        <img id="showcase-image" 
+                               class="w-full h-full object-contain scale-[1.1] origin-center relative" 
+                               src="img/nov.png" alt="ONYX Signature Coffee Bag">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Product Info -->
+            <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left pt-8 md:pt-0">
+                <div class="showcase-info glass-panel p-8 md:p-12 rounded-3xl w-full max-w-lg border border-white/5 bg-[#0a0a0a]/60 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative">
+                    <!-- Subtle Inner Glow -->
+                    <div class="absolute inset-0 shadow-[inset_0_0_30px_rgba(255,255,255,0.02)] rounded-3xl pointer-events-none"></div>
+
+                    <div class="showcase-text text-gold font-sans tracking-[0.25em] text-xs font-semibold uppercase mb-6 drop-shadow-sm">
+                        ONYX Signature
+                    </div>
+                    
+                    <h2 class="showcase-text font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6 text-white leading-tight drop-shadow-lg">
+                        ONYX Black Roast
+                    </h2>
+                    
+                    <p class="showcase-text font-sans text-gray-300 font-light text-base md:text-lg leading-relaxed mb-8">
+                        Crafted for deep focus and precision.<br class="hidden md:block" />
+                        A bold Italian-inspired profile with rich body and refined bitterness.
+                    </p>
+                    
+                    <button class="showcase-text w-full md:w-auto btn-buy bg-transparent border border-gold text-gold hover:bg-gold hover:text-black transition-all duration-500 px-10 py-4 rounded-full font-sans uppercase tracking-[0.2em] text-sm font-semibold shadow-[0_0_20px_rgba(212,175,55,0.1)] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] hover:scale-105">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
     <!-- PRODUCT SECTION: The Arsenal -->
     <section id="arsenal-pin-wrapper" class="relative w-full h-[100vh] bg-[#030303] overflow-hidden z-20">
         <!-- Background elements for depth -->
@@ -136,9 +189,8 @@
                             No.01</h3>
                         <div class="text-gold font-serif italic text-xl md:text-2xl mb-5 opacity-90">Espresso Core</div>
                         <div class="h-[1px] w-12 bg-white/20 mb-5"></div>
-                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-6">Engineered
+                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-0">Engineered
                             for Focus.</p>
-                        <p class="font-sans text-gold font-medium text-xl tracking-widest">€24.00</p>
                     </div>
                 </div>
 
@@ -174,9 +226,8 @@
                             No.02</h3>
                         <div class="text-gold font-serif italic text-xl md:text-2xl mb-5 opacity-90">Midnight Drip</div>
                         <div class="h-[1px] w-12 bg-white/20 mb-5"></div>
-                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-6">Sustained
+                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-0">Sustained
                             Velocity.</p>
-                        <p class="font-sans text-gold font-medium text-xl tracking-widest">€22.00</p>
                     </div>
                 </div>
 
@@ -213,9 +264,8 @@
                         <div class="text-gold font-serif italic text-xl md:text-2xl mb-5 opacity-90">Cold Extraction
                         </div>
                         <div class="h-[1px] w-12 bg-white/20 mb-5"></div>
-                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-6">Absolute
+                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-0">Absolute
                             Clarity.</p>
-                        <p class="font-sans text-gold font-medium text-xl tracking-widest">€26.00</p>
                     </div>
                 </div>
 
