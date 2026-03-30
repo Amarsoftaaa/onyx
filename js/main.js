@@ -110,6 +110,48 @@ heroTl.to("#section-4 .glass-panel", { y: 0, scale: 1, duration: 9, ease: "power
 
 
 /* -------------------------------------------------------------------------- */
+/* 3. HERITAGE SECTION ANIMATION                                              */
+/* -------------------------------------------------------------------------- */
+const heritageTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: '#heritage-section',
+        start: 'top 70%',
+        toggleActions: 'play none none reverse'
+    }
+});
+
+// Fade in and slide up text elements with a stagger
+heritageTl.fromTo('.heritage-item', 
+    { y: 40, opacity: 0 },
+    { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: "power3.out" }
+);
+
+// Parallax and zoom effect on video
+gsap.to('#heritage-video', {
+    scrollTrigger: {
+        trigger: '#heritage-section',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+    },
+    y: "10%",
+    scale: 1.05,
+    ease: "none"
+});
+
+// Light sweep effect
+gsap.to('#heritage-sweep', {
+    scrollTrigger: {
+        trigger: '#heritage-section',
+        start: 'top 50%',
+        toggleActions: 'play none none reverse'
+    },
+    x: '0%', // Translating to 0% creates the sweep
+    duration: 2.5,
+    ease: "power2.inOut"
+});
+
+/* -------------------------------------------------------------------------- */
 /* 2. ARSENAL (PRODUCT) HORIZONTAL SCROLL                                     */
 /* -------------------------------------------------------------------------- */
 const productsContainer = document.getElementById('products-container');

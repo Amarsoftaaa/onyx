@@ -3,6 +3,7 @@ body {
     color: white;
     margin: 0;
     overflow-x: hidden;
+    scrollbar-color: #D4AF37 #0a0a0a;
 }
 
 /* Dark Scrollbar acting as a black border on the right */
@@ -11,14 +12,15 @@ body {
     background: #000000;
 }
 ::-webkit-scrollbar-track {
-    background: #000000;
+    background: #0a0a0a;
 }
 ::-webkit-scrollbar-thumb {
-    background: #222222;
-    border: 1px solid #000000;
+    background: #D4AF37;
+    border: 2px solid #0a0a0a;
+    border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #444444;
+    background: #ebd283;
 }
 
 .glass-panel {
