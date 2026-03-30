@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONYX | Fuel for the Obsessed</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind-config.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="antialiased font-sans selection:bg-gold selection:text-onyx bg-onyx text-white">
+
+    <!-- HERO SECTION (Script will pin this wrapper) -->
+    <section id="hero-pin-wrapper" class="relative w-full h-[100vh] overflow-hidden bg-onyx z-10">
+
+        <!-- Media Container -->
+        <div class="absolute top-0 left-0 w-full h-full -z-10">
+            <canvas id="hero-canvas" class="absolute top-0 left-0 w-full h-full object-cover"></canvas>
+            <!-- Overlay gradient for better text readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-onyx/40 via-transparent to-onyx/80"></div>
+        </div>
+
+        <!-- UI Overlay -->
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+
+            <!-- Header / Logo -->
+            <div class="absolute top-0 left-0 w-full p-8 flex justify-between items-center z-50">
+                <div class="font-serif text-2xl font-semibold tracking-widest text-white">ONYX</div>
+            </div>
+
+            <!-- Section 1 (0%) Center Hero -->
+            <div id="section-1" class="absolute inset-0 flex flex-col items-center justify-center px-6">
+                <div class="glass-panel p-10 md:p-16 rounded-3xl max-w-4xl text-center transform transition-transform">
+                    <h1 class="font-serif text-5xl md:text-8xl font-semibold mb-6 tracking-tight drop-shadow-2xl">
+                        <span class="text-gold opacity-90">ONYX.</span><br />Fuel for the <br
+                            class="md:hidden" />Obsessed.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 font-light max-w-2xl mx-auto tracking-wide">
+                        Mastering the dark arts of focus.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2 (33%) Bottom Left -->
+            <div id="section-2"
+                class="absolute inset-0 flex flex-col justify-end items-start pb-20 pl-6 md:pb-32 md:pl-24 opacity-0 px-6">
+                <div class="glass-panel p-8 md:p-10 rounded-2xl max-w-lg text-left">
+                    <div class="w-12 h-[1px] bg-gold mb-6"></div>
+                    <h2 class="font-serif text-3xl md:text-5xl font-medium mb-4 text-white">Precision<br /><span
+                            class="text-gold">Extraction.</span></h2>
+                    <p class="text-gray-300 font-light text-lg md:text-xl leading-relaxed">The physics of taste
+                        materialized in every drop. Uncompromising quality.</p>
+                </div>
+            </div>
+
+            <!-- Section 3 (66%) Bottom Right -->
+            <div id="section-3"
+                class="absolute inset-0 flex flex-col justify-end items-end pb-20 pr-6 md:pb-32 md:pr-24 opacity-0 px-6">
+                <div class="glass-panel p-8 md:p-10 rounded-2xl max-w-lg text-right flex flex-col items-end">
+                    <div class="w-12 h-[1px] bg-gold mb-6"></div>
+                    <h2 class="font-serif text-3xl md:text-5xl font-medium mb-4 text-white">Deep Work<br /><span
+                            class="text-gold">State.</span></h2>
+                    <p class="text-gray-300 font-light text-lg md:text-xl leading-relaxed">100% Arabica. Engineered to
+                        transcend ordinary limits.</p>
+                </div>
+            </div>
+
+            <!-- Section 4 (90%) Center CTA -->
+            <div id="section-4" class="absolute inset-0 flex flex-col items-center justify-center opacity-0 px-6">
+                <div
+                    class="glass-panel p-12 md:p-20 rounded-3xl max-w-2xl text-center flex flex-col items-center border-gold/30">
+                    <h2 class="font-serif text-4xl md:text-6xl font-semibold mb-4 text-white">Deploy <span
+                            class="text-gold">Faster.</span></h2>
+                    <p class="text-gray-300 mb-10 text-lg font-light">Experience the unmatched power of Onyx.</p>
+                    <button
+                        class="pointer-events-auto bg-gold text-onyx hover:bg-white hover:text-onyx hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all duration-500 px-10 py-5 rounded-full font-medium text-sm md:text-base tracking-widest uppercase shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+                        Subscribe to Onyx
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT SECTION: The Arsenal -->
+    <section id="arsenal-pin-wrapper" class="relative w-full h-[100vh] bg-[#030303] overflow-hidden z-20">
+        <!-- Background elements for depth -->
+        <div id="arsenal-bg"
+            class="absolute inset-0 w-[150%] h-full flex items-center justify-center -z-10 bg-[radial-gradient(circle_at_center,_rgba(212,175,55,0.05)_0%,_rgba(10,10,10,1)_70%)]">
+        </div>
+        <div class="absolute inset-0 grain-overlay z-0"></div>
+
+        <div class="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[80vh] flex items-center z-10">
+            <div id="products-container" class="flex items-center gap-16 md:gap-32 px-[50vw] whitespace-nowrap h-full">
+
+                <!-- Product 1 -->
+                <div
+                    class="product-card flex flex-col items-center justify-center relative w-[85vw] md:w-[35vw] max-w-[450px] shrink-0 transform transition-transform group">
+                    <div
+                        class="relative w-full aspect-[3/4] mb-12 flex items-center justify-center transition-transform duration-700 ease-out group-hover:-translate-y-4">
+                        <div
+                            class="img-glow absolute inset-0 bg-gold/10 blur-[60px] rounded-full group-hover:bg-gold/30 transition-colors duration-700 pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-1/2 h-6 bg-black blur-[12px] rounded-[100%] pointer-events-none">
+                        </div>
+
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="ONYX No.01"
+                            class="relative z-10 w-2/3 h-full object-cover object-center rounded-sm shadow-2xl brightness-75 contrast-125 sepia-[.2] transition-all duration-700 group-hover:brightness-90">
+
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none group-hover:pointer-events-auto">
+                            <button
+                                class="bg-black/40 border border-gold text-white hover:bg-gold hover:text-black hover:border-gold transition-all duration-300 px-8 py-4 rounded-full font-sans uppercase tracking-[0.2em] text-xs font-semibold backdrop-blur-md shadow-lg">
+                                Add to Ritual
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-info glass-panel w-full p-8 md:p-10 rounded-2xl flex flex-col items-center text-center transition-transform duration-700">
+                        <h3 class="font-serif text-3xl md:text-4xl font-medium mb-2 text-white tracking-wider">ONYX
+                            No.01</h3>
+                        <div class="text-gold font-serif italic text-xl md:text-2xl mb-5 opacity-90">Espresso Core</div>
+                        <div class="h-[1px] w-12 bg-white/20 mb-5"></div>
+                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-6">Engineered
+                            for Focus.</p>
+                        <p class="font-sans text-gold font-medium text-xl tracking-widest">€24.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div
+                    class="product-card flex flex-col items-center justify-center relative w-[85vw] md:w-[35vw] max-w-[450px] shrink-0 transform transition-transform group">
+                    <div
+                        class="relative w-full aspect-[3/4] mb-12 flex items-center justify-center transition-transform duration-700 ease-out group-hover:-translate-y-4">
+                        <div
+                            class="img-glow absolute inset-0 bg-gold/10 blur-[60px] rounded-full group-hover:bg-gold/30 transition-colors duration-700 pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-1/2 h-6 bg-black blur-[12px] rounded-[100%] pointer-events-none">
+                        </div>
+
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="ONYX No.02"
+                            class="relative z-10 w-2/3 h-full object-cover object-center rounded-sm shadow-2xl brightness-75 contrast-125 sepia-[.2] transition-all duration-700 group-hover:brightness-90">
+
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none group-hover:pointer-events-auto">
+                            <button
+                                class="bg-black/40 border border-gold text-white hover:bg-gold hover:text-black hover:border-gold transition-all duration-300 px-8 py-4 rounded-full font-sans uppercase tracking-[0.2em] text-xs font-semibold backdrop-blur-md shadow-lg">
+                                Add to Ritual
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-info glass-panel w-full p-8 md:p-10 rounded-2xl flex flex-col items-center text-center transition-transform duration-700">
+                        <h3 class="font-serif text-3xl md:text-4xl font-medium mb-2 text-white tracking-wider">ONYX
+                            No.02</h3>
+                        <div class="text-gold font-serif italic text-xl md:text-2xl mb-5 opacity-90">Midnight Drip</div>
+                        <div class="h-[1px] w-12 bg-white/20 mb-5"></div>
+                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-6">Sustained
+                            Velocity.</p>
+                        <p class="font-sans text-gold font-medium text-xl tracking-widest">€22.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div
+                    class="product-card flex flex-col items-center justify-center relative w-[85vw] md:w-[35vw] max-w-[450px] shrink-0 transform transition-transform group">
+                    <div
+                        class="relative w-full aspect-[3/4] mb-12 flex items-center justify-center transition-transform duration-700 ease-out group-hover:-translate-y-4">
+                        <div
+                            class="img-glow absolute inset-0 bg-gold/10 blur-[60px] rounded-full group-hover:bg-gold/30 transition-colors duration-700 pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-1/2 h-6 bg-black blur-[12px] rounded-[100%] pointer-events-none">
+                        </div>
+
+                        <img loading="lazy"
+                            src="https://images.unsplash.com/photo-1610632380989-680fe40816c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="ONYX No.03"
+                            class="relative z-10 w-2/3 h-full object-cover object-center rounded-sm shadow-2xl brightness-75 contrast-125 sepia-[.2] transition-all duration-700 group-hover:brightness-90">
+
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none group-hover:pointer-events-auto">
+                            <button
+                                class="bg-black/40 border border-gold text-white hover:bg-gold hover:text-black hover:border-gold transition-all duration-300 px-8 py-4 rounded-full font-sans uppercase tracking-[0.2em] text-xs font-semibold backdrop-blur-md shadow-lg">
+                                Add to Ritual
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-info glass-panel w-full p-8 md:p-10 rounded-2xl flex flex-col items-center text-center transition-transform duration-700">
+                        <h3 class="font-serif text-3xl md:text-4xl font-medium mb-2 text-white tracking-wider">ONYX
+                            No.03</h3>
+                        <div class="text-gold font-serif italic text-xl md:text-2xl mb-5 opacity-90">Cold Extraction
+                        </div>
+                        <div class="h-[1px] w-12 bg-white/20 mb-5"></div>
+                        <p class="font-sans text-gray-400 font-light tracking-wide text-sm md:text-base mb-6">Absolute
+                            Clarity.</p>
+                        <p class="font-sans text-gold font-medium text-xl tracking-widest">€26.00</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Filler (Optional, just space to scroll past) -->
+    <div class="w-full h-[50vh] bg-black flex items-center justify-center">
+        <div class="text-white/30 font-sans tracking-[0.3em] text-sm uppercase">Onyx Co. All Rights Reserved</div>
+    </div>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Ensure DOM is loaded before running main logic
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
